@@ -1,0 +1,272 @@
+:root {
+  --primary: #6c4ab6;
+  --primary-dark: #4f348b;
+  --soft: #f6f3fb;
+  --dark: #212529;
+  --muted: #6c757d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark);
+  background-color:
+    #ffffff;
+  line-height: 1.6;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+.nav-link {
+  font-weight: 600;
+  padding: 10px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary) !important;
+}
+
+.hero {
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(33, 37, 41, .88), rgba(33, 37, 41, .35)),
+    url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=85") center/cover no-repeat;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+  font-weight: 800;
+}
+
+.hero p {
+  max-width: 650px;
+}
+
+.section-title {
+  font-weight: 800;
+  margin-bottom: .75rem;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.bg-soft {
+  background-color: var(--soft);
+}
+
+.product-card {
+  height: 100%;
+  border: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, .13);
+}
+
+.product-card img {
+  height: 230px;
+  object-fit: cover;
+}
+
+.price {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.badge-soft {
+  background-color: #eee8fa;
+  color: var(--primary-dark);
+}
+
+.feature-box {
+  height: 100%;
+  padding: 30px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.page-banner {
+  padding: 90px 0;
+  background: linear-gradient(135deg, #4f348b, #8d6bd1);
+  color: white;
+}
+
+.contact-card {
+  border: 0;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+}
+
+footer {
+  background: #17151c;
+  color: #ddd;
+}
+
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    min-height: 560px;
+    text-align: center;
+  }
+
+  .section-padding {
+    padding: 55px 0;
+  }
+
+  .gallery-item {
+    height: 220px;
+  }
+}
+
+@media (max-width: 575.98px) {
+
+  /* --- Penyesuaian Responsif Khusus HP --- */
+
+  /* Hero Section */
+  .hero {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    /* Ukuran teks judul lebih kecil di HP */
+  }
+
+  .hero .btn {
+    display: block;
+    width: 100%;
+    /* Tombol memenuhi lebar layar */
+    margin-bottom: 12px;
+  }
+
+  .hero .btn.me-2 {
+    margin-right: 0 !important;
+    /* Menghapus margin kanan jika tombol berbaris ke bawah */
+  }
+
+  /* Padding & Typography Umum */
+  .section-padding {
+    padding: 40px 0;
+    /* Mengurangi padding vertikal di layar kecil */
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    /* Ukuran judul seksi (section) dikurangi */
+  }
+
+  /* Kartu & Box */
+  .product-card img {
+    height: 180px;
+    /* Gambar produk tidak terlalu tinggi */
+  }
+
+  .feature-box {
+    padding: 20px;
+  }
+
+  /* Banner Halaman */
+  .page-banner {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* --- Gaya Premium untuk Menu Navigasi di Mobile (Tablet & HP) --- */
+  .navbar-collapse {
+    background-color: var(--soft);
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    margin-top: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+    margin-top: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 12px 5px !important;
+    font-size: 1.05rem;
+    transition: all 0.2s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    padding-left: 12px !important; /* Efek geser kecil saat disentuh/hover */
+    color: var(--primary) !important;
+  }
+  
+  .navbar-nav .btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(108, 74, 182, 0.25);
+  }
+}
